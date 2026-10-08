@@ -1,4 +1,4 @@
-# v1.4 — current release
+# Production release
 
 Extract this ZIP into a NEW folder, close the old app, and run START_WINDOWS.bat. The title bar must say A4 PDF Converter v1.4. Select original PDFs using Add PDFs & convert. Successful results from earlier versions are regenerated with this new profile.
 
