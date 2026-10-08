@@ -1,0 +1,11 @@
+FORM 20-F v1.3 REVIEW
+
+Close the old app, extract this ZIP into a new folder, and run START_WINDOWS.bat. The title must say **A4 PDF Converter v1.3**. Add PDFs as before; the supplied Form 20-F is recognized automatically by its file contents, even if renamed.
+
+This new profile converts the exact supplied 230-page `form20f.pdf` into 496 A4 landscape pages. All rebuilt body, table and footer text is embedded Mulish 11pt. Landscape provides room for the financial columns. Text and values remain in their source rows and columns; complete row contents stay together. Long tables continue across pages, with detected year-based column headings repeated. The original reference banner retains its aspect ratio and original portrait-page width on the wider landscape page.
+
+**Explicit exceptions:** organisational charts on source pages 27 and 59 are retained as original vector artwork, including their original label fonts. They are not Mulish 11pt. Eight private Symbol-font dash glyphs were visually checked and mapped to a Mulish em dash. The original page references in the text/contents remain unchanged; the Source page footer and bookmarks identify the original page on each converted page. Italic styling is not retained by the bundled two-weight font family.
+
+Validation: 8873 source rows checked individually; ordered numeric sequences checked for each row; exact character inventory checked with documented page-footer/dash/repeated-heading normalization; no rebuilt word overlaps; A4 dimensions and horizontal bounds checked. 88 heading rows repeat on continuation pages. Two preserved chart regions are listed separately in the validation JSON.
+
+The profile is limited to the exact supplied report because its diagram regions and Symbol-font meanings were reviewed. It does not treat arbitrary annual reports as safe automatically. Other files still use the existing supported-layout converter and may return NEEDS_REVIEW. The GUI/launcher remains untested on native Windows; file-handle cleanup is covered by regression checks.

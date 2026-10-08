@@ -1,0 +1,18 @@
+# v1.4 — current release
+
+Extract this ZIP into a NEW folder, close the old app, and run START_WINDOWS.bat. The title bar must say A4 PDF Converter v1.4. Select original PDFs using Add PDFs & convert. Successful results from earlier versions are regenerated with this new profile.
+
+Fixes for the reported layout issue:
+- The complete Form 20-F opening page fits on ONE portrait A4 page at 11pt.
+- Landscape pages now have a full-width banner; the logo is not stretched. The remaining report pages retain landscape to fit the financial columns. Total: 494 pages.
+- The two original charts retain their original label fonts, as previously disclosed.
+
+New tested inputs, all A4 portrait, Mulish 11pt, with the reference header/footer and custom margins:
+- Money2India Canada new-customer offer: 2 pages. Old logo and orange outer border removed.
+- Seniors Advantage GIC terms: 2 pages. Benefit table retained on one page. Verified duplicate raster text overlays removed; underlying text rebuilt in Mulish. Paragraphs inside the benefit cell and bullet lists retained.
+- Hello Canada/RBC referral program: 3 pages. Lettered conditions and FAQ numbering retained.
+
+Validation: seven regression tests passed, including all new documents, prior logo/border samples, annual-report row checks, Windows-style file cleanup, and retry/resume. Font sizes, content inventory and table numeric sequence checks passed. All seven new-document pages were rendered and inspected, along with the corrected annual-report cover and header. Windows GUI execution itself is not available in the Linux test environment.
+
+Known limitation: the annual-report profile recognizes the supplied report by content fingerprint; arbitrary complex PDFs may still require a separate profile. No claim of universal lossless PDF reconstruction.
+

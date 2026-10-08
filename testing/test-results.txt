@@ -1,0 +1,10 @@
+v1.2 verification: 6 tests passed.
+- Legacy header removal
+- Outer border removal
+- Complex report rejected without an output PDF
+- Temporary PDF cleanup on success
+- Temporary PDF cleanup on failure
+- Failed-job retry and completed-job skip
+
+Tests executed on Linux with a Windows-like file-lock assertion during cleanup. Native Windows runtime is not available here.
+All 3 pages of INE090A08KY7-converted.pdf and all 17 pages of dctoc-converted.pdf were rendered and visually reviewed.

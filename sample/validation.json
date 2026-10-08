@@ -1,0 +1,46 @@
+{
+  "input": "incorrect-pdf.pdf",
+  "source_pages": 11,
+  "output_pages": 19,
+  "tables": 11,
+  "numeric_rows_verified": 193,
+  "font": "Mulish",
+  "font_px_equivalent": 14.6667,
+  "font_pt": 11.0,
+  "page_size": "A4",
+  "top_margin_cm": 3.0,
+  "header_to_content_cm": [
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929,
+    0.71929
+  ],
+  "left_margin_cm": 1.88,
+  "right_margin_cm": 1.89,
+  "bottom_margin_cm": 2.55,
+  "body_font_sizes_pt": [
+    11.0
+  ],
+  "character_inventory": "passed; repeated table headings permitted",
+  "status": "CONVERTED_REVIEW_LAYOUT",
+  "notes": [
+    "Reflow changes line wraps and pagination. Manual layout review required before publishing.",
+    "Word font size 11 interpreted as 11pt. Top margin is 3cm from the page edge, matching the screenshot.",
+    "Superscript markers retained at 11pt; original visible text checked. Hidden white page-number artifacts excluded."
+  ]
+}

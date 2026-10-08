@@ -1,0 +1,10 @@
+v1.3 validation
+
+6 regression checks passed.
+Annual report: 230 source pages, 496 A4 landscape output pages.
+8,873 source rows verified; 3,255 rows containing numeric values.
+Exact character inventory and numeric order checks passed.
+All rebuilt text is embedded Mulish 11pt. Original chart labels retained on source pages 27 and 59.
+88 repeated heading rows. No overlapping rebuilt words or horizontal overflow.
+All 496 pages rendered with Poppler and inspected in contact sheets; wide tables and both charts inspected at readable scale.
+Native Windows GUI not executed in this Linux environment.
