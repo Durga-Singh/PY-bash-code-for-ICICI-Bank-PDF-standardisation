@@ -1,0 +1,4 @@
+sample/
+testing/
+__pycache__/
+*.pdf
