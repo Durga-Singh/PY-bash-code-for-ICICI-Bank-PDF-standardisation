@@ -1,0 +1,485 @@
+{
+  "input": "code_of_business_conduct_ethics.pdf",
+  "source_pages": 34,
+  "engine_version": "2.1.0",
+  "font": "Mulish",
+  "font_pt": 11,
+  "page_size": "A4",
+  "top_margin_cm": 3,
+  "bottom_margin_cm": 2.55,
+  "left_margin_cm": 1.88,
+  "right_margin_cm": 1.89,
+  "pages": [
+    {
+      "source_page": 1,
+      "output_start": 1,
+      "output_end": 1,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 2,
+      "output_start": 2,
+      "output_end": 2,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 1,
+      "exceptions": [],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 3,
+      "output_start": 3,
+      "output_end": 3,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 4,
+      "output_start": 4,
+      "output_end": 4,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 5,
+      "output_start": 5,
+      "output_end": 5,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 6,
+      "output_start": 6,
+      "output_end": 6,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 7,
+      "output_start": 7,
+      "output_end": 7,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 8,
+      "output_start": 8,
+      "output_end": 8,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 9,
+      "output_start": 9,
+      "output_end": 9,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 10,
+      "output_start": 10,
+      "output_end": 10,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 11,
+      "output_start": 11,
+      "output_end": 11,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 12,
+      "output_start": 12,
+      "output_end": 12,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 13,
+      "output_start": 13,
+      "output_end": 13,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 14,
+      "output_start": 14,
+      "output_end": 14,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 15,
+      "output_start": 15,
+      "output_end": 15,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 16,
+      "output_start": 16,
+      "output_end": 16,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 17,
+      "output_start": 17,
+      "output_end": 17,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 18,
+      "output_start": 18,
+      "output_end": 18,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 19,
+      "output_start": 19,
+      "output_end": 19,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 20,
+      "output_start": 20,
+      "output_end": 20,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 21,
+      "output_start": 21,
+      "output_end": 21,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 22,
+      "output_start": 22,
+      "output_end": 22,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 23,
+      "output_start": 23,
+      "output_end": 23,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 24,
+      "output_start": 24,
+      "output_end": 24,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 25,
+      "output_start": 25,
+      "output_end": 25,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 26,
+      "output_start": 26,
+      "output_end": 26,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 27,
+      "output_start": 27,
+      "output_end": 27,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 28,
+      "output_start": 28,
+      "output_end": 28,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 1,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 29,
+      "output_start": 29,
+      "output_end": 29,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 30,
+      "output_start": 30,
+      "output_end": 30,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 31,
+      "output_start": 31,
+      "output_end": 31,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 32,
+      "output_start": 32,
+      "output_end": 32,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 33,
+      "output_start": 33,
+      "output_end": 33,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [],
+      "orientation": "portrait"
+    },
+    {
+      "source_page": 34,
+      "output_start": 34,
+      "output_end": 34,
+      "mode": "REFLOWED",
+      "reason": "",
+      "tables": 0,
+      "exceptions": [
+        "Symbol list bullet mapped to Unicode bullet"
+      ],
+      "orientation": "portrait"
+    }
+  ],
+  "notes": [
+    "Body and table text on rebuilt pages is Mulish 11pt. Preserved pages keep original fonts and layout.",
+    "Original page references remain in the text; Source page bookmarks map to the new pagination.",
+    "Review the visual layout before publication."
+  ],
+  "output_pages": 34,
+  "reflowed_source_pages": 34,
+  "preserved_source_pages": [],
+  "tables": 2,
+  "status": "CONVERTED_REVIEW_LAYOUT",
+  "font_compliance": "ALL_REBUILT_TEXT_11PT_MULISH",
+  "preflight": {
+    "resolved_embedded_fonts": [
+      {
+        "font": "Mulish-SemiBold",
+        "family": "Mulish",
+        "bold": false,
+        "italic": false,
+        "weight": 600,
+        "xref": 11
+      },
+      {
+        "font": "Mulish-Black",
+        "family": "Mulish",
+        "bold": true,
+        "italic": false,
+        "weight": 900,
+        "xref": 35
+      },
+      {
+        "font": "TrebuchetMS",
+        "family": "Trebuchet MS",
+        "bold": false,
+        "italic": false,
+        "weight": 400,
+        "xref": 27
+      },
+      {
+        "font": "SymbolMT",
+        "family": "Symbol",
+        "bold": false,
+        "italic": false,
+        "weight": 400,
+        "xref": 77
+      },
+      {
+        "font": "Mulish-SemiBoldItalic",
+        "family": "Mulish",
+        "bold": false,
+        "italic": true,
+        "weight": 600,
+        "xref": 165
+      }
+    ],
+    "font_resolution_issues": []
+  },
+  "verification": {
+    "passed": true,
+    "measured_page_sizes": {
+      "595.28 x 841.89 pt": 34
+    },
+    "measured_fonts_and_sizes": {
+      "Mulish-Black 11.000 pt": 280,
+      "Mulish-SemiBold 11.000 pt": 1345,
+      "Mulish-SemiBoldItalic 11.000 pt": 1
+    },
+    "noncompliant_font_output_pages": [],
+    "noncompliant_size_output_pages": [],
+    "unverified_artwork_source_pages": [],
+    "output_pages_without_body_text": [],
+    "text_outside_page": [],
+    "review_reasons": []
+  },
+  "review_reasons": [],
+  "release_readiness": "MEASURED_FORMAT_COMPLIANT_REVIEW_LAYOUT"
+}

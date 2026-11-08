@@ -31,8 +31,28 @@ class DocumentTests(unittest.TestCase):
             with fitz.open(dest) as doc:
                 self.assertAlmostEqual(doc[0].rect.width,595.2756,places=2)
                 self.assertEqual(report['page_map'][0]['output_end'],1)
-                self.assertTrue(all(abs(p.rect.width-841.8898)<.01 and abs(p.rect.height-595.2756)<.01 for p in list(doc)[1:]))
+                self.assertLess(len(report['landscape_source_pages']),58)
+                self.assertLess(doc[1].rect.width,doc[1].rect.height)
+                self.assertGreater(len(report['contents_entries']),35)
                 self.assertEqual(len(doc.get_toc()),230)
+
+    def test_trade_form_symbols_and_writing_space(self):
+        with tempfile.TemporaryDirectory() as td:
+            dest=Path(td)/'converted.pdf'
+            report=convert(Path(os.environ['PDF_TEST_DIRECTORY'])/'Trade-Online-Application-Form-and-TnC.pdf',dest)
+            self.assertTrue(report['form_writing_space_preserved'])
+            self.assertEqual(report['body_font_sizes_pt'],[11.0])
+            self.assertEqual(report['page_borders_removed'],0)
+            with fitz.open(dest) as doc:
+                text=''.join(page.get_text() for page in doc)
+                self.assertEqual(text.count('➢'),4)
+                self.assertEqual(text.count('4909-2207-7970'),1)
+                symbols=[s for page in doc for b in page.get_text('dict')['blocks'] for l in b.get('lines',[]) for s in l['spans'] if '➢' in s['text']]
+                self.assertTrue(all(s['size']==11 and 'DejaVu' in s['font'] for s in symbols))
+                for title,opening in [('AUTHORISED USER ACKNOWLEDGEMENT*','The person(s)'),('AUTHORISED SIGNATORY ACKNOWLEDGEMENT*','I/We acknowledge')]:
+                    pages=[page for page in doc if title in page.get_text()]
+                    self.assertEqual(len(pages),1)
+                    self.assertIn(opening,pages[0].get_text())
 
     def test_canada_files(self):
         for name,pages in [('money2india-canada-new-customer-offer-terms-and-conditions.pdf',2),('seniors-advantage-gics-terms-and-conditions.pdf',2),('tc-faq-hello-canada-and-rbc-referral-program.pdf',3)]:

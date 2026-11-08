@@ -1,4 +1,9 @@
 sample/
-testing/
+testing/*
+!testing/v2.1.0-validation.json
+!testing/v2.1.0-test-results.txt
+!testing/github-import-2026-11-08.txt
 __pycache__/
 *.pdf
+!examples/*.pdf
+.venv/

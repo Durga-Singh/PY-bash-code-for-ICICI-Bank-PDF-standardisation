@@ -4,10 +4,11 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk,filedialog,messagebox
 from batch import Runner,inputs
+from release import VERSION
 
 class App:
     def __init__(self,root):
-        self.root=root;root.title('A4 PDF Converter v1.4 | Layout fix + Canada PDFs');root.geometry('940x580')
+        self.root=root;root.title(f'A4 PDF Converter v{VERSION} | Verified output');root.geometry('940x580')
         self.jobs=queue.Queue();self.events=queue.Queue();self.pending=set();self.stop=threading.Event();self.watch_folder=None;self.observed={}
         self.output=tk.StringVar(value=str(Path.home()/'Documents'/'Converted_PDFs'))
         ttk.Label(root,text='A4 PDF Converter',font=('Segoe UI',20,'bold')).pack(anchor='w',padx=20,pady=(18,5))

@@ -1,0 +1,343 @@
+{
+  "release": "2.1.0",
+  "validation_date_utc": "2026-10-30",
+  "environment": {
+    "platform": "Linux; actual Windows/Chrome/Brave installation not executed",
+    "packages": {
+      "PyMuPDF": "1.26.6",
+      "reportlab": "4.4.9",
+      "fonttools": "4.61.1",
+      "Pillow": "12.3.0"
+    }
+  },
+  "tests": {
+    "discovered": 57,
+    "passed": 49,
+    "skipped": 8,
+    "failed": 0,
+    "skipped_cases": [
+      "test_queue_tables_and_actual_fonts (test_bonus_terms.BonusTermsTests.test_queue_tables_and_actual_fonts) ... skipped 'Set PDF_TEST_DIRECTORY for supplied PDFs.'",
+      "test_form_a (test_cgas_forms.CGASTests.test_form_a) ... skipped 'Set PDF_TEST_DIRECTORY for supplied PDFs.'",
+      "test_form_b (test_cgas_forms.CGASTests.test_form_b) ... skipped 'Set PDF_TEST_DIRECTORY for supplied PDFs.'",
+      "test_canada_files (test_new_documents.DocumentTests.test_canada_files) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'",
+      "test_complex_report_preserves_rows_and_lists_chart_exceptions (test_new_documents.DocumentTests.test_complex_report_preserves_rows_and_lists_chart_exceptions) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'",
+      "test_legacy_header (test_new_documents.DocumentTests.test_legacy_header) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'",
+      "test_page_borders (test_new_documents.DocumentTests.test_page_borders) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'",
+      "test_trade_form_symbols_and_writing_space (test_new_documents.DocumentTests.test_trade_form_symbols_and_writing_space) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'"
+    ],
+    "reason_for_skips": "Earlier optional original-PDF fixture files unavailable. No unavailable-file case is counted as passed.",
+    "javascript_syntax": "app.js and background.js passed node --check",
+    "python_syntax": "compileall passed"
+  },
+  "actual_document_tests": [
+    {
+      "document": "code-of-business-conduct",
+      "source_filename": "code_of_business_conduct_ethics.pdf",
+      "source_sha256": "59f0503b84fbcf0544e1ccb4d252202a529bf444c56039921200c05fd78959e2",
+      "output_sha256": "5f323cb461a0348e98ddcf052a47fd588e2bb3c6d1d64fc626ce54d5ee03102b",
+      "source_pages": 34,
+      "output_pages": 34,
+      "engine_version": "2.1.0",
+      "status": "CONVERTED_REVIEW_LAYOUT",
+      "preserved_source_pages": [],
+      "verification": {
+        "passed": true,
+        "measured_page_sizes": {
+          "595.28 x 841.89 pt": 34
+        },
+        "measured_fonts_and_sizes": {
+          "Mulish-Black 11.000 pt": 280,
+          "Mulish-SemiBold 11.000 pt": 1345,
+          "Mulish-SemiBoldItalic 11.000 pt": 1
+        },
+        "noncompliant_font_output_pages": [],
+        "noncompliant_size_output_pages": [],
+        "unverified_artwork_source_pages": [],
+        "output_pages_without_body_text": [],
+        "text_outside_page": [],
+        "review_reasons": []
+      }
+    },
+    {
+      "document": "disclosure",
+      "source_filename": "INE090A08UC2(1)(2).pdf",
+      "source_sha256": "5473d83b158faf17a910112b623fd7bd2773b8de90f065ecc8252f61f577eb72",
+      "output_sha256": "898e6ffe47cf277dd13e52315e55a90182a7a88b2a97da9639ace2341916fd5c",
+      "source_pages": 192,
+      "output_pages": 285,
+      "engine_version": "2.1.0",
+      "status": "CONVERTED_REVIEW_LAYOUT",
+      "preserved_source_pages": [],
+      "verification": {
+        "passed": true,
+        "measured_page_sizes": {
+          "595.28 x 841.89 pt": 285
+        },
+        "measured_fonts_and_sizes": {
+          "Mulish-SemiBold 11.000 pt": 11174,
+          "Mulish-Black 11.000 pt": 5783,
+          "Mulish-BlackItalic 11.000 pt": 1523
+        },
+        "noncompliant_font_output_pages": [],
+        "noncompliant_size_output_pages": [],
+        "unverified_artwork_source_pages": [],
+        "output_pages_without_body_text": [],
+        "text_outside_page": [],
+        "review_reasons": []
+      }
+    },
+    {
+      "document": "consumer-education",
+      "source_filename": "org.pdf",
+      "source_sha256": "92657c81689b45112f8d7677288de8fbb7fee21c76f59f31308667ecec291eb1",
+      "output_sha256": "2d5b11075534a1b8e6863b23f8b9990090d1afd3481abf176a902fecf16eb949",
+      "source_pages": 6,
+      "output_pages": 6,
+      "engine_version": "2.1.0",
+      "status": "CONVERTED_REVIEW_LAYOUT",
+      "preserved_source_pages": [],
+      "verification": {
+        "passed": true,
+        "measured_page_sizes": {
+          "595.28 x 841.89 pt": 6
+        },
+        "measured_fonts_and_sizes": {
+          "Mulish-Black 11.000 pt": 165,
+          "Mulish-SemiBold 11.000 pt": 267
+        },
+        "noncompliant_font_output_pages": [],
+        "noncompliant_size_output_pages": [],
+        "unverified_artwork_source_pages": [],
+        "output_pages_without_body_text": [],
+        "text_outside_page": [],
+        "review_reasons": []
+      }
+    },
+    {
+      "document": "bank-notice",
+      "source_filename": "website-content-bank-notice.pdf",
+      "source_sha256": "9fdcd441a152ab792a337d23412309c9dfb6b1f092ef1a7e0b737b940dab8930",
+      "output_sha256": "4dd16770dff816adfb6dc34dc1fa8cdc0e07f3d0aa471796721203cb50d5fc0d",
+      "source_pages": 2,
+      "output_pages": 2,
+      "engine_version": "2.1.0",
+      "status": "CONVERTED_REVIEW_LAYOUT",
+      "preserved_source_pages": [],
+      "verification": {
+        "passed": true,
+        "measured_page_sizes": {
+          "595.28 x 841.89 pt": 2
+        },
+        "measured_fonts_and_sizes": {
+          "Mulish-SemiBold 11.000 pt": 57
+        },
+        "noncompliant_font_output_pages": [],
+        "noncompliant_size_output_pages": [],
+        "unverified_artwork_source_pages": [],
+        "output_pages_without_body_text": [],
+        "text_outside_page": [],
+        "review_reasons": []
+      }
+    },
+    {
+      "document": "form20f",
+      "source_filename": "form20f.pdf",
+      "source_sha256": "e48bce0d86837b58ab59c20f5e91cb0bdb7e119e85a5c7ffd43ea84b8eb086b2",
+      "output_sha256": "aba10f33e6933a8c6b29888c45b9c3daa88e3cf2ff433220e45aa720998e6756",
+      "source_pages": 230,
+      "output_pages": 447,
+      "engine_version": "2.1.0",
+      "status": "PARTIAL_REVIEW_REQUIRED",
+      "preserved_source_pages": [],
+      "verification": {
+        "passed": false,
+        "measured_page_sizes": {
+          "595.28 x 841.89 pt": 348,
+          "841.89 x 595.28 pt": 99
+        },
+        "measured_fonts_and_sizes": {
+          "Mulish-Black 11.000 pt": 3601,
+          "Mulish-BlackItalic 11.000 pt": 1435,
+          "Mulish-SemiBold 11.000 pt": 17088,
+          "Mulish-SemiBoldItalic 11.000 pt": 603,
+          "TimesNewRoman 7.937 pt": 43,
+          "TimesNewRoman 4.884 pt": 1,
+          "TimesNewRoman 7.759 pt": 15
+        },
+        "noncompliant_font_output_pages": [
+          44,
+          108
+        ],
+        "noncompliant_size_output_pages": [
+          45,
+          46,
+          47,
+          48,
+          77,
+          78,
+          123,
+          124,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          146,
+          147,
+          148,
+          149,
+          150,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          170,
+          171,
+          172,
+          173,
+          176,
+          177,
+          178,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          208,
+          209,
+          210,
+          216,
+          217,
+          220,
+          221,
+          222,
+          225,
+          226,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          258,
+          259,
+          353,
+          354,
+          355,
+          358,
+          359,
+          360,
+          377,
+          378,
+          379,
+          397,
+          398,
+          399,
+          417,
+          418,
+          419,
+          420,
+          421,
+          433,
+          434,
+          435,
+          440,
+          441,
+          442
+        ],
+        "unverified_artwork_source_pages": [],
+        "output_pages_without_body_text": [],
+        "text_outside_page": [],
+        "review_reasons": [
+          "Non-Mulish or non-11pt text on output pages: 44, 108",
+          "Non-portrait-A4 output pages: 45, 46, 47, 48, 77, 78, 123, 124, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 146, 147, 148, 149, 150, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 170, 171, 172, 173, 176, 177, 178, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 208, 209, 210, 216, 217, 220, 221, 222, 225, 226, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 258, 259, 353, 354, 355, 358, 359, 360, 377, 378, 379, 397, 398, 399, 417, 418, 419, 420, 421, 433, 434, 435, 440, 441, 442"
+        ]
+      }
+    }
+  ],
+  "total_original_pages": 464,
+  "fully_format_compliant_documents": 4,
+  "independent_layout_checks": {
+    "ethics": {
+      "contents_references": 17,
+      "disciplinary_table_cells": 18,
+      "extra_cover_logo_removed": true,
+      "white_patches_not_table": true,
+      "all_34_pages_reviewed_as_contact_sheets": true,
+      "full_size_reviews": [
+        1,
+        2,
+        5,
+        6,
+        28,
+        34
+      ]
+    },
+    "disclosure": {
+      "equity_table_row_pairs": 63,
+      "borrowing_table_cells": 264,
+      "footnote_number_order_checked": true,
+      "visually_spot_checked_source_pages": [
+        82,
+        84,
+        103,
+        138
+      ]
+    },
+    "form20f": {
+      "original_rows_verified": 8873,
+      "status": "PARTIAL_REVIEW_REQUIRED",
+      "chart_font_exception_output_pages": [
+        44,
+        108
+      ],
+      "landscape_output_pages": 99
+    }
+  },
+  "test_coverage": [
+    "Embedded opaque font aliases and four styles",
+    "Private Symbol bullet mapping",
+    "Resized/JPEG-compressed reference banner and negative artwork match",
+    "Top and bottom source page numbers",
+    "Per-cell text and numeric-order checks",
+    "Superscript footnote separate from decimal value",
+    "White background patches and compound filled border strips",
+    "Underlines, strike, bold, italics, colors and URL targets",
+    "Atomic strict failure and input/output isolation",
+    "Download/redirect/error handling, batches, Excel links and resume",
+    "Partial conversion in review folder with linked report",
+    "Engine/extension version mismatch and output reconversion guards",
+    "PDF handle cleanup on success and failure"
+  ],
+  "limits": [
+    "Font/page verification is not proof of perfect semantic reconstruction for every arbitrary PDF.",
+    "Unverified scans, artwork and ambiguous layouts are retained/reported for review; no OCR guess is made.",
+    "Original reference header is intentionally retained as artwork.",
+    "Recognized symbol markers may remain 11pt-high artwork and are reported explicitly.",
+    "Form 20-F remains an exception case, not a fully compliant result."
+  ]
+}

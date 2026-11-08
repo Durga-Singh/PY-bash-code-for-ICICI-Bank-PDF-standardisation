@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "A4 Mulish PDF Batch Converter",
+  "version": "2.1.0",
+  "description": "Download PDF URLs, convert locally, and create an Excel conversion report.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0x01mMXkmWWK3I33n/KEOBRPJ90hHSqzVlBfZMNbkrwHfxqH7Z5VMhcTvM0NuyDofhqlOQ72ffSSJHrKZ2m2Li+UNVE+h5/b+7V82SkHGaGwHUYOorxUmpBJCcIBuHAtX085sACpFxclBOjwqPCZEtZHNopJx3cChn4TtMteGKijkfKC6Rurs0WbqSCOBFDyqVmeHimAguQ1/bDlpYBz3oEWd0Wd+1cB+eRK95TGya0YLBwjEADM1HbfOw4FdP5b/6urnwTXEYFFDe6PUfY1IX4wzfNuNML/W8/wsLHam8s9Qjv/1koslTc8NY5CHc+b7eO0npbODH0LlW0SY4I1UwIDAQAB",
+  "permissions": [
+    "nativeMessaging"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open PDF Batch Converter"
+  }
+}

@@ -1,0 +1,103 @@
+test_annotated (test_adaptive.AdaptiveTests.test_annotated) ... Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+PDF: processed 1/1 source pages
+ok
+test_borderless (test_adaptive.AdaptiveTests.test_borderless) ... PDF: processed 1/1 source pages
+ok
+test_forms_encrypted_malformed_atomic (test_adaptive.AdaptiveTests.test_forms_encrypted_malformed_atomic) ... ok
+test_prose_and_landscape_and_border (test_adaptive.AdaptiveTests.test_prose_and_landscape_and_border) ... PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+ok
+test_rotation (test_adaptive.AdaptiveTests.test_rotation) ... PDF: processed 1/1 source pages
+ok
+test_ruled_merged_and_long_tables (test_adaptive.AdaptiveTests.test_ruled_merged_and_long_tables) ... PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+PDF: processed 2/2 source pages
+ok
+test_strict_mode (test_adaptive.AdaptiveTests.test_strict_mode) ... ok
+test_tall_cell (test_adaptive.AdaptiveTests.test_tall_cell) ... PDF: processed 1/1 source pages
+ok
+test_unsupported_script_and_mixed (test_adaptive.AdaptiveTests.test_unsupported_script_and_mixed) ... PDF: processed 2/2 source pages
+ok
+test_vector_scan_blank_longword (test_adaptive.AdaptiveTests.test_vector_scan_blank_longword) ... PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+ok
+test_wide_table (test_adaptive.AdaptiveTests.test_wide_table) ... PDF: processed 1/1 source pages
+ok
+test_queue_tables_and_actual_fonts (test_bonus_terms.BonusTermsTests.test_queue_tables_and_actual_fonts) ... skipped 'Set PDF_TEST_DIRECTORY for supplied PDFs.'
+test_form_a (test_cgas_forms.CGASTests.test_form_a) ... skipped 'Set PDF_TEST_DIRECTORY for supplied PDFs.'
+test_form_b (test_cgas_forms.CGASTests.test_form_b) ... skipped 'Set PDF_TEST_DIRECTORY for supplied PDFs.'
+test_borrowing_panels_every_cell_and_series (test_disclosure_portrait.DisclosurePortraitTests.test_borrowing_panels_every_cell_and_series) ... ok
+test_capital_table_quantity_and_cumulative_pairs (test_disclosure_portrait.DisclosurePortraitTests.test_capital_table_quantity_and_cumulative_pairs) ... ok
+test_every_page_portrait_every_text_span_mulish_11 (test_disclosure_portrait.DisclosurePortraitTests.test_every_page_portrait_every_text_span_mulish_11) ... ok
+test_source_text_styles_and_link_targets (test_disclosure_portrait.DisclosurePortraitTests.test_source_text_styles_and_link_targets) ... ok
+test_merged_cell_render_alignment (test_extension.ExtensionTests.test_merged_cell_render_alignment) ... ok
+test_native_framing (test_extension.ExtensionTests.test_native_framing) ... ok
+test_partial_status_excel_and_resume (test_extension.ExtensionTests.test_partial_status_excel_and_resume) ... PDF: processed 1/1 source pages
+ok
+test_url_batch_and_report (test_extension.ExtensionTests.test_url_batch_and_report) ... PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+PDF: processed 1/1 source pages
+ok
+test_explicit_weight_overrides_wrong_flags (test_font_weight.WeightTests.test_explicit_weight_overrides_wrong_flags) ... ok
+test_mixed_bold_rendering (test_font_weight.WeightTests.test_mixed_bold_rendering) ... PDF: processed 1/1 source pages
+ok
+test_contents_numbers_and_click_targets (test_form20f_portrait.Form20FLayoutTests.test_contents_numbers_and_click_targets) ... ok
+test_footer_and_inventory_checks (test_form20f_portrait.Form20FLayoutTests.test_footer_and_inventory_checks) ... ok
+test_orientation_and_font (test_form20f_portrait.Form20FLayoutTests.test_orientation_and_font) ... ok
+test_canada_files (test_new_documents.DocumentTests.test_canada_files) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'
+test_complex_report_preserves_rows_and_lists_chart_exceptions (test_new_documents.DocumentTests.test_complex_report_preserves_rows_and_lists_chart_exceptions) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'
+test_legacy_header (test_new_documents.DocumentTests.test_legacy_header) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'
+test_page_borders (test_new_documents.DocumentTests.test_page_borders) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'
+test_trade_form_symbols_and_writing_space (test_new_documents.DocumentTests.test_trade_form_symbols_and_writing_space) ... skipped 'Set PDF_TEST_DIRECTORY to the folder with the three supplied PDFs.'
+test_all_pages_symbols_styles_and_layout (test_robustness.EthicsFileTests.test_all_pages_symbols_styles_and_layout) ... ok
+test_bottom_page_numbers_removed_in_preserved_pages (test_robustness.RobustnessTests.test_bottom_page_numbers_removed_in_preserved_pages) ... PDF: processed 2/2 source pages
+ok
+test_cell_audit_rejects_swapped_values (test_robustness.RobustnessTests.test_cell_audit_rejects_swapped_values) ... ok
+test_dark_table_background_and_white_text_retained (test_robustness.RobustnessTests.test_dark_table_background_and_white_text_retained) ... PDF: processed 1/1 source pages
+ok
+test_decimal_and_raised_footnote_keep_separate_positions (test_robustness.RobustnessTests.test_decimal_and_raised_footnote_keep_separate_positions) ... PDF: processed 1/1 source pages
+ok
+test_filled_border_strips_are_not_cell_backgrounds (test_robustness.RobustnessTests.test_filled_border_strips_are_not_cell_backgrounds) ... PDF: processed 1/1 source pages
+ok
+test_final_gate_measures_fonts_not_report_claim (test_robustness.RobustnessTests.test_final_gate_measures_fonts_not_report_claim) ... ok
+test_opaque_font_names_recover_all_four_styles (test_robustness.RobustnessTests.test_opaque_font_names_recover_all_four_styles) ... PDF: processed 1/1 source pages
+ok
+test_orange_artwork_is_not_deleted_as_a_logo (test_robustness.RobustnessTests.test_orange_artwork_is_not_deleted_as_a_logo) ... ok
+test_partial_batch_uses_review_folder_and_report_link (test_robustness.RobustnessTests.test_partial_batch_uses_review_folder_and_report_link) ... PDF: processed 1/1 source pages
+ok
+test_private_symbol_bullet_under_opaque_font_name (test_robustness.RobustnessTests.test_private_symbol_bullet_under_opaque_font_name) ... PDF: processed 1/1 source pages
+ok
+test_reconverting_generated_output_is_blocked (test_robustness.RobustnessTests.test_reconverting_generated_output_is_blocked) ... PDF: processed 1/1 source pages
+ok
+test_resized_recompressed_banner_is_removed (test_robustness.RobustnessTests.test_resized_recompressed_banner_is_removed) ... PDF: processed 1/1 source pages
+ok
+test_strict_rejection_does_not_overwrite_result (test_robustness.RobustnessTests.test_strict_rejection_does_not_overwrite_result) ... ok
+test_version_mismatch_blocks_conversion_before_download (test_robustness.RobustnessTests.test_version_mismatch_blocks_conversion_before_download) ... ok
+test_white_background_patches_do_not_create_a_table (test_robustness.RobustnessTests.test_white_background_patches_do_not_create_a_table) ... PDF: processed 1/1 source pages
+ok
+test_decoration_color_and_clickable_url (test_text_formatting.FormattingTests.test_decoration_color_and_clickable_url) ... PDF: processed 1/1 source pages
+ok
+test_four_weights_and_styles_remain_distinct (test_text_formatting.FormattingTests.test_four_weights_and_styles_remain_distinct) ... PDF: processed 1/1 source pages
+ok
+test_internal_link_remapped (test_text_formatting.FormattingTests.test_internal_link_remapped) ... PDF: processed 2/2 source pages
+ok
+test_italics_not_silently_removed (test_text_formatting.FormattingTests.test_italics_not_silently_removed) ... PDF: processed 1/1 source pages
+ok
+test_repeated_top_numbers_removed_body_numbers_kept (test_top_page_numbers.TopNumberTests.test_repeated_top_numbers_removed_body_numbers_kept) ... PDF: processed 3/3 source pages
+ok
+test_single_top_number_not_guessed (test_top_page_numbers.TopNumberTests.test_single_top_number_not_guessed) ... PDF: processed 1/1 source pages
+ok
+test_failure_closes_before_temp_cleanup (test_windows_cleanup.HandleTests.test_failure_closes_before_temp_cleanup) ... PDF: processed 6/6 source pages
+ok
+test_success_closes_before_temp_cleanup (test_windows_cleanup.HandleTests.test_success_closes_before_temp_cleanup) ... PDF: processed 6/6 source pages
+ok
+test_previous_failure_retries_and_success_skips (test_windows_cleanup.RetryTests.test_previous_failure_retries_and_success_skips) ... ok
+
+----------------------------------------------------------------------
+Ran 57 tests in 25.239s
+
+OK (skipped=8)

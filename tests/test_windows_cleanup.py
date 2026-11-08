@@ -6,7 +6,7 @@ import hashlib,os,sys,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-import converter,batch
+import converter,batch,quality_gate
 
 class RetryTests(unittest.TestCase):
     def test_previous_failure_retries_and_success_skips(self):
@@ -43,13 +43,15 @@ class HandleTests(unittest.TestCase):
             destination=Path(td)/'result.pdf'
             with patch.object(converter.fitz,'open',side_effect=tracked_open),patch.object(converter.tempfile,'TemporaryDirectory',WindowsLikeDirectory):
                 if fail:
-                    with patch.object(converter,'numeric_rows',side_effect=RuntimeError('injected validation error')):
+                    destination.write_bytes(b'existing result')
+                    with patch.object(quality_gate,'inspect',side_effect=RuntimeError('injected validation error')):
                         with self.assertRaisesRegex(RuntimeError,'injected validation error'):
                             converter.convert(os.environ['PDF_TEST_INPUT'],destination)
+                    self.assertEqual(destination.read_bytes(),b'existing result')
                 else:
                     result=converter.convert(os.environ['PDF_TEST_INPUT'],destination)
                     self.assertEqual(result['font_pt'],11)
-                    self.assertEqual(result['numeric_rows_verified'],193)
+                    self.assertTrue(result['verification']['passed'])
                     self.assertTrue(destination.is_file())
             self.assertTrue(self_cleanup_checks)
             self.assertTrue(all(doc.is_closed for doc in opened),'PDF handles leaked on return/exception')

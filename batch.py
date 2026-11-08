@@ -2,6 +2,7 @@
 import argparse,csv,hashlib,json,sqlite3,time
 from pathlib import Path
 from converter import convert
+from release import VERSION
 
 class Runner:
     def __init__(self,output):
@@ -11,13 +12,18 @@ class Runner:
     def process(self,path,retry=False):
         path=Path(path).resolve()
         digest=hashlib.sha256(path.read_bytes()).hexdigest()
-        key=hashlib.sha256((str(path)+digest+'profile-v6-word-11pt-canada-layout-fix').encode()).hexdigest()
+        key=hashlib.sha256((str(path)+digest+'adaptive-v'+VERSION).encode()).hexdigest()
         old=self.db.execute('SELECT status,output,detail FROM jobs WHERE id=?',(key,)).fetchone()
-        if old and not retry and old[0]=='CONVERTED_REVIEW_LAYOUT' and Path(old[1]).is_file():
+        if old and not retry and old[0] in ('CONVERTED_REVIEW_LAYOUT','PARTIAL_REVIEW_REQUIRED') and Path(old[1]).is_file():
             return {'source':str(path),'status':'ALREADY_PROCESSED','detail':old[2],'output':old[1]}
         dest=self.output/(path.stem+'_'+key[:8]+'_A4.pdf')
         try:
-            report=convert(path,dest);status=report['status'];detail=f"{report['source_pages']} to {report['output_pages']} pages; {report['tables']} tables; checks passed. Review layout."
+            report=convert(path,dest);status=report['status'];detail=f"{report['source_pages']} to {report['output_pages']} pages; {report['tables']} tables; {report['status']}; original-font pages: {report.get('preserved_source_pages',[])}. Review layout."
+            if status=='PARTIAL_REVIEW_REQUIRED':
+                review=self.output/'review'/dest.name;review.parent.mkdir(exist_ok=True)
+                for old,new in ((dest,review),(Path(str(dest)+'.json'),Path(str(review)+'.json')),(dest.with_suffix('.review.html'),review.with_suffix('.review.html'))):
+                    if old.exists():old.replace(new)
+                dest=review;detail+=' '+'; '.join(report.get('review_reasons',[]))
             if report.get('exceptions'):detail+=' Original chart lettering retained on source pages 27 and 59.'
         except Exception as e:
             status='NEEDS_REVIEW';detail=f'{type(e).__name__}: {e}'

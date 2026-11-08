@@ -1,105 +1,86 @@
-# Production release
+# A4 PDF Converter 2.1.0
 
-Extract this ZIP into a NEW folder, close the old app, and run START_WINDOWS.bat. The title bar must say A4 PDF Converter v1.4. Select original PDFs using Add PDFs & convert. Successful results from earlier versions are regenerated with this new profile.
+Convert original PDFs locally to the reference banner/footer, A4 portrait and Mulish 11pt. Includes a Windows desktop uploader and a Chrome/Brave extension for PDF URL batches.
 
-Fixes for the reported layout issue:
-- The complete Form 20-F opening page fits on ONE portrait A4 page at 11pt.
-- Landscape pages now have a full-width banner; the logo is not stretched. The remaining report pages retain landscape to fit the financial columns. Total: 494 pages.
-- The two original charts retain their original label fonts, as previously disclosed.
+[Download the complete v2.1.0 package](dist/A4_PDF_Converter_Extension_v2.1.0.zip?raw=true). Source code, extension files and installer are also available directly in this repository.
 
-New tested inputs, all A4 portrait, Mulish 11pt, with the reference header/footer and custom margins:
-- Money2India Canada new-customer offer: 2 pages. Old logo and orange outer border removed.
-- Seniors Advantage GIC terms: 2 pages. Benefit table retained on one page. Verified duplicate raster text overlays removed; underlying text rebuilt in Mulish. Paragraphs inside the benefit cell and bullet lists retained.
-- Hello Canada/RBC referral program: 3 pages. Lettered conditions and FAQ numbering retained.
+## Install or update
 
-Validation: seven regression tests passed, including all new documents, prior logo/border samples, annual-report row checks, Windows-style file cleanup, and retry/resume. Font sizes, content inventory and table numeric sequence checks passed. All seven new-document pages were rendered and inspected, along with the corrected annual-report cover and header. Windows GUI execution itself is not available in the Linux test environment.
+1. Close the converter and all Chrome/Brave windows so an old native helper cannot remain running.
+2. Extract this complete ZIP into a new permanent folder. Keep its files together.
+3. Run **INSTALL_EXTENSION_WINDOWS.bat**. Python 3.11 or 3.12 with Add Python to PATH is required. The first installation downloads the listed dependencies.
+4. Open `chrome://extensions` or `brave://extensions`, enable Developer mode, remove the old unpacked copy, and Load unpacked using this package's **extension** folder.
+5. Open PDF Batch Converter and click **Connect / refresh batches**. It must say **Extension and local converter 2.1.0 connected**. A version mismatch blocks conversion and gives update instructions.
+6. Paste direct PDF URLs or import a text list, then choose Download & convert. To rebuild an old batch, select it and Resume; previous-version results are regenerated from the downloaded originals.
 
-Known limitation: the annual-report profile recognizes the supplied report by content fingerprint; arbitrary complex PDFs may still require a separate profile. No claim of universal lossless PDF reconstruction.
+For local PDF uploads, run **START_WINDOWS.bat**, confirm v2.1.0 in the title and choose **Add PDFs & convert**. Add folder and Watch folder are also available.
 
----
+Use the original PDF as input. Previously generated converter outputs are rejected to prevent duplicate headers and repeated reflow.
 
-# A4 PDF converter — sample-tested reflow profile
+## Output settings
 
-## Start on Windows
-1. Install Python 3.11 or 3.12 with **Add Python to PATH** selected (including Tcl/Tk).
-2. Extract the complete ZIP to a folder. Do not run it inside the ZIP.
-3. Double-click **START_WINDOWS.bat**. First setup downloads the Python dependencies.
-4. Click **Add PDFs & convert** to select one or many files. They convert automatically.
-5. **Add folder** queues PDFs recursively. **Watch folder** processes new/changed PDFs after they stop changing for three seconds. Leave the app open to continue watching.
-6. Open the output folder for PDFs, validation JSON files, and **batch_report.csv**.
+- A4 portrait: 210 x 297 mm.
+- Body and footer: embedded Mulish **11pt**, matching size 11 in Word.
+- Existing regular/emphasised distinction uses Mulish SemiBold/Black, with matching italic fonts. Original bold, italic, underline, strikethrough, colour and URL links are retained on rebuilt text.
+- Top page margin 3cm, bottom 2.55cm, left 1.88cm, right 1.89cm. The top margin starts at the paper edge; it is not a 3cm gap below the banner.
+- Reference banner and right-aligned Page x | total footer.
+- Reflow may change wrapping and page count. Original written page references remain; source-page bookmarks map to the output. The separate legacy Form 20-F profile also updates its reviewed contents links.
 
-Documents are processed locally. No document upload to a remote service is required. Dependencies are downloaded during initial installation only.
+## What changed in 2.1.0
 
-## Exact settings used
-- A4 portrait: 210 × 297 mm.
-- Mulish SemiBold body / Black emphasis, preserving the sample's weight distinction.
-- Body and footer: **11pt**, matching size 11 in Microsoft Word. The font is embedded in the PDF.
-- Banner image extracted from the provided reference, with the same approximately 22.81mm visible height.
-- **Top margin: 30.00mm from the top edge of the page to the content boundary.**
-- Left 18.8mm, right 18.9mm, bottom content boundary 25.5mm.
-- Footer follows the reference's right-aligned blue spaced `Page` label and dark `x | total`, redrawn in Mulish at the requested size. Counts reflect the new pagination.
+- Inspects embedded font programs when a PDF uses opaque aliases such as CIDFont+F8. This recovers the actual font weight/style and symbol identity instead of treating a normal bullet as an unsupported alphabet character.
+- Normalises recognised Symbol bullets and retains other recognised symbol glyphs as explicitly reported 11pt-high artwork.
+- Recognises the reference ICICI banner after resizing or JPEG recompression, with conservative visual matching. Unknown images are retained for review.
+- Removes repeated top/bottom source page numbers, including from pages requiring preservation.
+- Reconstructs enumerated contents lists with a separate page-reference column and keeps hanging bullet/list indents.
+- Verifies text and number order inside individual rendered table cells, including split rows and superscript footnotes. Keeps filled backgrounds separate from thin border strips.
+- Excludes invisible white background patches from table detection, preventing prose from acquiring invented table borders.
+- Checks text coverage, styles, links, bounds and overlap during reflow; then measures fonts and page dimensions again from the saved PDF.
+- Gives each output a readable HTML checks report, a detailed JSON report, and an explicit compliant/partial outcome. Version-aware retry/resume and engine/extension version checks prevent stale results.
 
-The screenshot's Last Custom Setting is applied: top 3cm, bottom 2.55cm, left 1.88cm, right 1.89cm. The banner sits inside the top margin, leaving approximately 7.2mm between its bottom and the content boundary. The bottom setting is a minimum clear margin, not a requirement to stretch text to that position.
+These font, symbol, contents-list, matching and verification changes are general rules. They do not depend on this document's filename or hash. Older reviewed layout profiles remain available for their supported complex documents.
 
-## Layout and checks
-PDFs store positioned drawing instructions, not reliable Word/Excel paragraph/table structures. To increase text size without overlapping table cells, this tool reconstructs recognized ruled tables and reflows text. Wrapping, row heights and page counts change. The tested legacy-logo and page-border documents flow continuously to avoid mostly empty pages; other profiles retain original page breaks. Tables can continue across additional pages, repeating detected headings. Key/value tables do not repeat their first data row. It is not a pixel-identical conversion.
+## URL batches and reports
 
-The included sample is based on the supplied financial-results PDF. Treat the tool as a tested profile for comparable text-based, ruled-table PDFs, not a universal lossless PDF converter. Review the sample and a representative selection of each new layout before processing a collection. Editable Word/Excel sources are preferable if exact source structure must be retained.
+Each batch is saved under `Documents\PDF_URL_Conversions\Batch_<date>_<id>`:
 
-Checks include visible text character inventory, embedded font glyph coverage, A4 dimensions, font sizes, content bounds, top margin, and numeric table-row sequence checks. Passing automated checks does not prove every semantic relationship or visual detail is correct. Output status intentionally remains **CONVERTED_REVIEW_LAYOUT**.
+- **originals/**: downloaded originals.
+- **converted/**: results passing the final measured format gate.
+- **review/**: incomplete results, preserved pages, unverified artwork or other format exceptions. These are not included in the successful-conversion count.
+- **conversion_status.xlsx**: each requested URL, download/conversion status, original/output links, page counts, font compliance, review reasons and a link to the HTML checks report.
+- **batch.json**: resume state.
 
-Scans/empty pages, encrypted PDFs, interactive forms, rotated pages, unsupported graphics, extraction mismatches and failures are marked **NEEDS_REVIEW**. Such files are not silently rasterized or shrunk. OCR and general unruled/multicolumn document reconstruction are not supported. Existing PDF links, bookmarks, accessibility tags, signatures, metadata and forms are not retained in reconstructed output. Signed/interactive documents should be handled from their editable source.
+The extension's **Checks** button opens the report for that PDF. **Retry failures / review** retries partial results as well as failures. Originals remain available in every successful download. One failed PDF does not stop the queue.
 
-## Long batches and resuming
-- Files run one at a time; one failure does not stop the queue.
-- Originals are unchanged. Output names include a hash to avoid filename collisions.
-- Conversion history is stored in the output folder. Re-adding the same unchanged files skips successfully converted jobs. Failed jobs are retried when you select them again. Keep this folder to retain history.
-- If the app closes, add the input folder again to resume. PDFs left partially written by interruption are reprocessed because their successful history entry was not committed.
-- Keep the computer awake and the app open for unattended batches.
-- Close `batch_report.csv` in Excel during conversion so it can be refreshed.
+Keep the browser open during a batch; the extension tab may close. Pause after current PDF, then resume later even after a browser restart. Excel updates every 10 jobs and at completion/pause; close Excel before refreshing it. Keep the report beside its folders so file links continue to work.
+
+The desktop uploader writes PDFs, matching checks reports and batch_report.csv. Partial results are placed in its review/ subfolder. Its SQLite history supports skipping completed jobs and resuming interrupted batches.
+
+## Limits and honest outcomes
+
+A PDF is a drawing format, and may not contain reliable paragraph, table or character information. A successful font/page check is not a guarantee of perfect semantic reconstruction of every possible document. Review complex layouts before publication.
+
+Scans, unsupported scripts/glyphs, unfamiliar diagrams, ambiguous layouts and unverified text inside images may need OCR or manual/source-document editing. The converter reports these cases; it does not invent missing text. Unknown artwork is not automatically deleted. Password-protected files need an unlocked original; signed or interactive forms are blocked to avoid silently losing fields or signatures.
+
+The older Form 20-F profile still has two original-font charts and some landscape financial tables. The new final gate correctly sends that result to review/ rather than counting it as fully format-compliant.
+
+PDFs are processed locally. No paid API or document-upload service is used. Public HTTP(S) URLs are supported; browser login cookies are not copied. The batch limit is 20,000 URLs and 300 MB per PDF.
 
 ## Command line
-After installation:
+
+```text
+python converter.py input.pdf output.pdf
+python converter.py input.pdf output.pdf --strict
+python batch.py input_folder output_folder
+python batch.py input_folder output_folder --watch
 ```
-.venv\Scripts\python.exe batch.py "C:\Input PDFs" "C:\Converted PDFs"
-.venv\Scripts\python.exe batch.py "C:\Input PDFs" "C:\Converted PDFs" --watch
-.venv\Scripts\python.exe batch.py "C:\Input PDFs" "C:\Converted PDFs" --retry
-```
-Single file:
-```
-.venv\Scripts\python.exe converter.py "input.pdf" "converted.pdf"
-```
-macOS/Linux: create a virtual environment, install requirements, then use `python app.py` or `python batch.py`. Tkinter may need installation through the operating system.
 
-## Assets and dependencies
-The header is from your reference PDF. Mulish fonts are static instances of the Google Fonts Mulish variable font, distributed under the included SIL Open Font License. Dependencies have their own licenses; PyMuPDF is offered under AGPL/commercial licensing. Review dependency licensing before integrating this into a distributed or proprietary application.
+Strict mode rejects any partial/noncompliant conversion without overwriting the existing destination. The normal mode keeps an explicit review result for troubleshooting.
 
-## Validation of this delivered version
-The 11-page supplied sample produces 19 pages. All 11 recognized tables and 193 numeric row sequences were checked; no numeric rows were lost, added, or reordered within a row. All output pages were rendered and visually reviewed. Measured content bounds start 30.00mm below the page edge; body font sizes are 11pt. Batch conversion, resume skipping and unsupported-file reporting were exercised. Python modules compile successfully. The desktop GUI and Windows launcher could not be launched in the headless Linux test environment and require a first-run check on your computer.
+## Validation and support files
 
-## v1.1 Windows file-lock fix
-Temporary PDFs are now explicitly closed before their temporary folder is removed, including when conversion raises an error. Source and validation PDFs are also closed before returning. Failed history entries are retried on selection, including failures recorded by the earlier version; no history deletion is needed. Successfully converted files are still skipped. Regression checks cover successful conversion, cleanup during exceptions, retry of an earlier failure, and skipping a completed job. These checks simulate Windows locking requirements on Linux; native Windows execution has not been verified here.
+See **UPDATE_v2.1.0.md** and **testing/v2.1.0-validation.json** for the exact tested documents, outcomes and known exceptions. Test execution is recorded in **testing/v2.1.0-test-results.txt**. The corrected current PDF and its reports are in **examples/**.
 
-## v1.2: previous release
-Close the old app, extract this ZIP into a new folder, and run START_WINDOWS.bat there. The title bar must say **A4 PDF Converter v1.2**. Failed conversions can be selected again without deleting conversion history.
+Conversion, URL download/redirect/error handling, Excel links, resume and version guards are tested on Linux. Actual Chrome/Brave native messaging installation has not been run on a Windows PC here. Enterprise browser policy can block unpacked extensions or native hosts.
 
-New supported cleanup: pixel-matched recognition of the legacy ICICI logo supplied in INE090A08KY7.pdf, including its surrounding frame; outer rectangular page borders; preservation of colored text and underlined footnote references. Unknown images are not classified as ICICI logos by filename. Font size and margins remain the agreed 11pt/A4/3cm top/2.55cm bottom/1.88cm left/1.89cm right.
-
-Test outcomes:
-- INE090A08KY7.pdf: 3 input pages -> 3 output pages; 1 old header removed; 4 tables retained; 3 decimal-number row sequences verified.
-- dctoc.pdf: 17 input pages -> 17 output pages; 16 outer borders removed; visible text inventory checked.
-- form20f.pdf: all 230 pages inspected for layout features. Strict conversion is unsupported: checkboxes on page 1, organisational diagrams on pages 27 and 59, financial tables without full grids (example page 28), and private Symbol-font glyphs on pages 146, 151 and 195. This was reported as NEEDS_REVIEW in v1.2. The v1.3 exception profile below now supports the exact supplied file.
-
-This remains a converter for supported layouts, not a universal lossless PDF engine.
-
-## v1.3: previous release — Form 20-F conversion
-
-Close the old app, extract this ZIP into a new folder, and run START_WINDOWS.bat. The title must say **A4 PDF Converter v1.3**. Add PDFs as before; the supplied Form 20-F is recognized automatically by its file contents, even if renamed.
-
-This new profile converts the exact supplied 230-page `form20f.pdf` into 496 A4 landscape pages. All rebuilt body, table and footer text is embedded Mulish 11pt. Landscape provides room for the financial columns. Text and values remain in their source rows and columns; complete row contents stay together. Long tables continue across pages, with detected year-based column headings repeated. The original reference banner retains its aspect ratio and original portrait-page width on the wider landscape page.
-
-**Explicit exceptions:** organisational charts on source pages 27 and 59 are retained as original vector artwork, including their original label fonts. They are not Mulish 11pt. Eight private Symbol-font dash glyphs were visually checked and mapped to a Mulish em dash. The original page references in the text/contents remain unchanged; the Source page footer and bookmarks identify the original page on each converted page. Italic styling is not retained by the bundled two-weight font family.
-
-Validation: 8873 source rows checked individually; ordered numeric sequences checked for each row; exact character inventory checked with documented page-footer/dash/repeated-heading normalization; no rebuilt word overlaps; A4 dimensions and horizontal bounds checked. 88 heading rows repeat on continuation pages. Two preserved chart regions are listed separately in the validation JSON.
-
-The profile is limited to the exact supplied report because its diagram regions and Symbol-font meanings were reviewed. It does not treat arbitrary annual reports as safe automatically. Other files still use the existing supported-layout converter and may return NEEDS_REVIEW. The GUI/launcher remains untested on native Windows; file-handle cleanup is covered by regression checks.
+The fonts are distributed under assets/OFL.txt. The reference header is the user's supplied asset. Dependency licenses apply, including PyMuPDF's AGPL/commercial licensing.
